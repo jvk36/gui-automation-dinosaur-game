@@ -4,7 +4,7 @@ pip install -r requirements.txt
 
 ## PROJECT INTRO:
 
-The project automates the Google Chrome Dinosaur Game (https://elgoog.im/dinosaur-game/) using Python libraries like pyautogui for controlling mouse and keyboard inputs, and Pillow (PIL) for image processing. The main idea is being able to make the dinosaur jump at the right time by detecting obstacles:
+The project automates the Google Chrome Dinosaur Game (https://elgoog.im/dinosaur-game/) using Python libraries like pyautogui and selenium for controlling mouse and keyboard inputs, and Pillow (PIL) for image processing. The main idea is being able to make the dinosaur jump at the right time by detecting obstacles:
 
 Detect Obstacles: We take screenshots of the game area to identify obstacles.
 Jumping Logic: When an obstacle is detected close to the dinosaur, the script will make the dinosaur jump by simulating a keyboard press.
@@ -12,7 +12,7 @@ Image Detection: We save a reference image of an obstacle (like a cactus) using 
 
 Library Requirements:
 
-pyautogui: for simulating the keypress to jump
+pyautogui or selenium: for simulating the keypress to jump
 Pillow: for screenshot and image detection
 
 ## First Attempt - main.py - EXPLANATION:
@@ -78,3 +78,8 @@ Detect Darker Pixels: We will look for pixels with a value below a threshold (e.
 
 The logic is pretty much the same as in main2.py with the difference that the dino_position is set to something that worked in our test computer initially. The dynamic dinosaur detection code is commented out and a note added to indicate to use that
 code to get the dinosaur position the first time one uses the program. 
+
+## main-selenim.py:
+
+The implementation doesn't function correctly but may be considered a proof-of-concept on how to automate games using the selenium library. 
+
